@@ -7,6 +7,7 @@
 
 #include <sstream>
 #include "SplashState.hpp"
+#include "MainMenuState.hpp"
 #include "DEFINITIONS.hpp"
 
 #include <iostream>
@@ -33,7 +34,7 @@ void SplashState::HandleInput() {
 
 void SplashState::Update(float dt) {
     if (_clock.getElapsedTime().asSeconds() > SPLASH_STATE_SHOW_TIME) {
-        std::cout << "Go to main menu" << std::endl;
+        _data->machine.AddState(StateRef(new MainMenuState(_data)), true);
     }
 }
 
