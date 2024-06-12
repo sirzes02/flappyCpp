@@ -11,6 +11,7 @@
 		BF7132F42C19E4BF00B5374C /* MainMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF7132F22C19E4BF00B5374C /* MainMenuState.cpp */; };
 		BF7132F72C19E95700B5374C /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF7132F52C19E95700B5374C /* GameState.cpp */; };
 		BF7132FA2C19EB3F00B5374C /* GameOverState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF7132F82C19EB3F00B5374C /* GameOverState.cpp */; };
+		BF7132FD2C1A420100B5374C /* Pipe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF7132FB2C1A420100B5374C /* Pipe.cpp */; };
 		BF96A3CB2C194EA10058919F /* libsfml-audio.2.6.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF3B4E5B2C19499F002DF515 /* libsfml-audio.2.6.1.dylib */; };
 		BF96A3CC2C194EA10058919F /* libsfml-graphics.2.6.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF3B4E5F2C19499F002DF515 /* libsfml-graphics.2.6.1.dylib */; };
 		BF96A3CD2C194EA10058919F /* libsfml-network.2.6.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF3B4E5C2C19499F002DF515 /* libsfml-network.2.6.1.dylib */; };
@@ -60,6 +61,8 @@
 		BF7132F62C19E95700B5374C /* GameState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameState.hpp; sourceTree = "<group>"; };
 		BF7132F82C19EB3F00B5374C /* GameOverState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameOverState.cpp; sourceTree = "<group>"; };
 		BF7132F92C19EB3F00B5374C /* GameOverState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameOverState.hpp; sourceTree = "<group>"; };
+		BF7132FB2C1A420100B5374C /* Pipe.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Pipe.cpp; sourceTree = "<group>"; };
+		BF7132FC2C1A420100B5374C /* Pipe.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Pipe.hpp; sourceTree = "<group>"; };
 		BF96A3D02C194FA90058919F /* State.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = State.hpp; sourceTree = "<group>"; };
 		BF96A3D12C19506E0058919F /* StateMachine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StateMachine.cpp; sourceTree = "<group>"; };
 		BF96A3D22C19506E0058919F /* StateMachine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StateMachine.hpp; sourceTree = "<group>"; };
@@ -131,6 +134,8 @@
 				BF7132F62C19E95700B5374C /* GameState.hpp */,
 				BF7132F82C19EB3F00B5374C /* GameOverState.cpp */,
 				BF7132F92C19EB3F00B5374C /* GameOverState.hpp */,
+				BF7132FB2C1A420100B5374C /* Pipe.cpp */,
+				BF7132FC2C1A420100B5374C /* Pipe.hpp */,
 			);
 			path = Flappy;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 				BF3B4E542C1947FB002DF515 /* main.cpp in Sources */,
 				BF96A3D32C19506E0058919F /* StateMachine.cpp in Sources */,
 				BF96A3DC2C1964820058919F /* Game.cpp in Sources */,
+				BF7132FD2C1A420100B5374C /* Pipe.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
