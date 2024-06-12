@@ -7,6 +7,7 @@
 
 #include <sstream>
 #include "MainMenuState.hpp"
+#include "GameState.hpp"
 #include "DEFINITIONS.hpp"
 
 #include <iostream>
@@ -38,7 +39,7 @@ void MainMenuState::HandleInput() {
         }
         
         if (_data->input.isSpriteClicked(_playButton, sf::Mouse::Left, _data->window)) {
-            std::cout << "Go to Game Screen" << std::endl;
+            _data->machine.AddState(StateRef(new GameState(_data)), true);
         }
     }
 }
