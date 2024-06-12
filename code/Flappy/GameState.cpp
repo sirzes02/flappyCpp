@@ -13,12 +13,9 @@
 
 namespace Sonar {
 GameState::GameState(GameDataRef data): _data(data) {
-    
 }
 
-void GameState::Init() {
-    std::cout << "Game State" << std::endl;
-    
+void GameState::Init() {    
     _data->assets.LoadTexture("Game Background", GAME_BACKGROUND_FILEPATH);
     _background.setTexture(this->_data->assets.GetTexture("Game Background"));
 }

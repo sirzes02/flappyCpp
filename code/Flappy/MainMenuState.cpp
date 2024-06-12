@@ -14,7 +14,6 @@
 
 namespace Sonar {
 MainMenuState::MainMenuState(GameDataRef data): _data(data) {
-    
 }
 
 void MainMenuState::Init() {

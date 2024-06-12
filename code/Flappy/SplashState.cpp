@@ -14,7 +14,6 @@
 
 namespace Sonar {
 SplashState::SplashState(GameDataRef data): _data(data) {
-    
 }
 
 void SplashState::Init() {
