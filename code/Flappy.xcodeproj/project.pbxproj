@@ -14,6 +14,7 @@
 		BF96A3CE2C194EA10058919F /* libsfml-system.2.6.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF3B4E5E2C19499F002DF515 /* libsfml-system.2.6.1.dylib */; };
 		BF96A3CF2C194EA10058919F /* libsfml-window.2.6.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF3B4E5D2C19499F002DF515 /* libsfml-window.2.6.1.dylib */; };
 		BF96A3D32C19506E0058919F /* StateMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF96A3D12C19506E0058919F /* StateMachine.cpp */; };
+		BF96A3D62C195E6A0058919F /* AssetManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF96A3D42C195E6A0058919F /* AssetManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,8 @@
 		BF96A3D02C194FA90058919F /* State.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = State.hpp; sourceTree = "<group>"; };
 		BF96A3D12C19506E0058919F /* StateMachine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StateMachine.cpp; sourceTree = "<group>"; };
 		BF96A3D22C19506E0058919F /* StateMachine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StateMachine.hpp; sourceTree = "<group>"; };
+		BF96A3D42C195E6A0058919F /* AssetManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AssetManager.cpp; sourceTree = "<group>"; };
+		BF96A3D52C195E6A0058919F /* AssetManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AssetManager.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 				BF96A3D02C194FA90058919F /* State.hpp */,
 				BF96A3D12C19506E0058919F /* StateMachine.cpp */,
 				BF96A3D22C19506E0058919F /* StateMachine.hpp */,
+				BF96A3D42C195E6A0058919F /* AssetManager.cpp */,
+				BF96A3D52C195E6A0058919F /* AssetManager.hpp */,
 			);
 			path = Flappy;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF96A3D62C195E6A0058919F /* AssetManager.cpp in Sources */,
 				BF3B4E542C1947FB002DF515 /* main.cpp in Sources */,
 				BF96A3D32C19506E0058919F /* StateMachine.cpp in Sources */,
 			);
