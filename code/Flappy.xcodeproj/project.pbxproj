@@ -17,6 +17,8 @@
 		BF96A3D62C195E6A0058919F /* AssetManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF96A3D42C195E6A0058919F /* AssetManager.cpp */; };
 		BF96A3D92C1961700058919F /* InputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF96A3D72C1961700058919F /* InputManager.cpp */; };
 		BF96A3DC2C1964820058919F /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF96A3DA2C1964820058919F /* Game.cpp */; };
+		BF96A4382C196AC70058919F /* SplashState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF96A4362C196AC70058919F /* SplashState.cpp */; };
+		BF96A4402C196F800058919F /* Resources in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF96A43F2C196F730058919F /* Resources */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +30,16 @@
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
+		};
+		BF96A4332C1969F90058919F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				BF96A4402C196F800058919F /* Resources in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -48,6 +60,10 @@
 		BF96A3D82C1961700058919F /* InputManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InputManager.hpp; sourceTree = "<group>"; };
 		BF96A3DA2C1964820058919F /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		BF96A3DB2C1964820058919F /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
+		BF96A4352C196A300058919F /* DEFINITIONS.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DEFINITIONS.hpp; sourceTree = "<group>"; };
+		BF96A4362C196AC70058919F /* SplashState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SplashState.cpp; sourceTree = "<group>"; };
+		BF96A4372C196AC70058919F /* SplashState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SplashState.hpp; sourceTree = "<group>"; };
+		BF96A43F2C196F730058919F /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +102,7 @@
 		BF3B4E522C1947FA002DF515 /* Flappy */ = {
 			isa = PBXGroup;
 			children = (
+				BF96A43F2C196F730058919F /* Resources */,
 				BF3B4E532C1947FB002DF515 /* main.cpp */,
 				BF96A3D02C194FA90058919F /* State.hpp */,
 				BF96A3D12C19506E0058919F /* StateMachine.cpp */,
@@ -96,6 +113,9 @@
 				BF96A3D82C1961700058919F /* InputManager.hpp */,
 				BF96A3DA2C1964820058919F /* Game.cpp */,
 				BF96A3DB2C1964820058919F /* Game.hpp */,
+				BF96A4352C196A300058919F /* DEFINITIONS.hpp */,
+				BF96A4362C196AC70058919F /* SplashState.cpp */,
+				BF96A4372C196AC70058919F /* SplashState.hpp */,
 			);
 			path = Flappy;
 			sourceTree = "<group>";
@@ -122,6 +142,7 @@
 				BF3B4E4C2C1947FA002DF515 /* Sources */,
 				BF3B4E4D2C1947FA002DF515 /* Frameworks */,
 				BF3B4E4E2C1947FA002DF515 /* CopyFiles */,
+				BF96A4332C1969F90058919F /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -171,6 +192,7 @@
 			files = (
 				BF96A3D92C1961700058919F /* InputManager.cpp in Sources */,
 				BF96A3D62C195E6A0058919F /* AssetManager.cpp in Sources */,
+				BF96A4382C196AC70058919F /* SplashState.cpp in Sources */,
 				BF3B4E542C1947FB002DF515 /* main.cpp in Sources */,
 				BF96A3D32C19506E0058919F /* StateMachine.cpp in Sources */,
 				BF96A3DC2C1964820058919F /* Game.cpp in Sources */,

@@ -5,7 +5,7 @@
 //  Created by Santiago Varela on 11/06/24.
 //
 
-#pragma once
+#pragma once
 
 namespace Sonar {
 class State {
