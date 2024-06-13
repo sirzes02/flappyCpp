@@ -12,6 +12,7 @@
 #include "Game.hpp"
 #include "Pipe.hpp"
 #include "Land.hpp"
+#include "Bird.hpp"
 
 namespace Sonar {
 class GameState : public State {
@@ -31,6 +32,7 @@ private:
     
     Pipe *pipe;
     Land *land;
+    Bird *bird;
     
     sf::Clock clock;
 };
