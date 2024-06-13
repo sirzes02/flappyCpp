@@ -17,13 +17,16 @@ Bird::Bird(GameDataRef data): _data(data) {
     _animationFrames.push_back(_data->assets.GetTexture("Bird Frame 4"));
     
     _birdSprites.setTexture(_animationFrames.at(_animationIteration));
+    
+    _birdSprites.setPosition((_data->window.getSize().x / 4) - (_birdSprites.getGlobalBounds().width / 2), (_data->window.getSize().y / 2) - (_birdSprites.getGlobalBounds().height / 2));
+    _birdState = BIRD_STATE_STILL;
 }
 
 void Bird::Draw() {
     _data->window.draw(_birdSprites);
 }
 
-void Bird::animate(float dt) {
+void Bird::Animate(float dt) {
     if (_clock.getElapsedTime().asSeconds() > (BIRD_ANIMATION_DURATION / _animationFrames.size())) {
         if (_animationIteration < _animationFrames.size() - 1) {
             _animationIteration++;
@@ -35,5 +38,23 @@ void Bird::animate(float dt) {
         
         _clock.restart();
     }
+}
+
+void Bird::Update(float dt) {
+    if (BIRD_STATE_FALLING == _birdState) {
+        _birdSprites.move(0, GRAVITY * dt);
+    } else if (BIRD_STATE_FLYING == _birdState) {
+        _birdSprites.move(0, -FLYING_SPEED * dt);
+    }
+    
+    if (_movementClock.getElapsedTime().asSeconds() > FLYING_DURATION) {
+        _movementClock.restart();
+        _birdState = BIRD_STATE_FALLING;
+    }
+}
+
+void Bird::Tap() {
+    _movementClock.restart();
+    _birdState = BIRD_STATE_FLYING;
 }
 }

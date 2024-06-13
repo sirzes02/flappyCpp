@@ -41,6 +41,7 @@ void GameState::HandleInput() {
         }
         
         if (_data->input.isSpriteClicked(_background, sf::Mouse::Left, _data->window)) {
+            bird->Tap();
         }
     }
 }
@@ -59,7 +60,8 @@ void GameState::Update(float dt) {
         clock.restart();
     }
     
-    bird->animate(dt);
+    bird->Animate(dt);
+    bird->Update(dt);
 }
 
 void GameState::Draw(float dt) {

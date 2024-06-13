@@ -20,8 +20,9 @@ public:
     Bird(GameDataRef data);
     
     void Draw();
-    
-    void animate(float df);
+    void Animate(float dt);
+    void Update(float dt);
+    void Tap();
     
 private:
     GameDataRef _data;
@@ -32,5 +33,8 @@ private:
     unsigned int _animationIteration;
     
     sf::Clock _clock;
+    sf::Clock _movementClock;
+    
+    int _birdState;
 };
 }
