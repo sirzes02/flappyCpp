@@ -12,6 +12,8 @@
 #include "DEFINITIONS.hpp"
 #include "Game.hpp"
 
+#include <vector>
+
 namespace Sonar {
 class Bird {
 public:
@@ -19,9 +21,16 @@ public:
     
     void Draw();
     
+    void animate(float df);
+    
 private:
     GameDataRef _data;
     
     sf::Sprite _birdSprites;
+    std::vector<sf::Texture> _animationFrames;
+    
+    unsigned int _animationIteration;
+    
+    sf::Clock _clock;
 };
 }
