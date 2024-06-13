@@ -22,9 +22,13 @@ public:
     void SpawnInvisiblePipe();
     void MovePipes(float dt);
     void DrawPipes();
+    void RandomisePipeOffset();
     
 private:
     GameDataRef _data;
     std::vector<sf::Sprite> pipeSprites;
+    
+    int _landHeight;
+    int _pipeSpawnYOffset;
 };
 }
