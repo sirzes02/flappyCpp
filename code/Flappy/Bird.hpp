@@ -36,5 +36,7 @@ private:
     sf::Clock _movementClock;
     
     int _birdState;
+    
+    float _rotation;
 };
 }
