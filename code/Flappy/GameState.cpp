@@ -28,6 +28,7 @@ void GameState::Init() {
     pipe = new Pipe(_data);
     land = new Land(_data);
     bird = new Bird(_data);
+    flash = new Flash(_data);
     
     _background.setTexture(this->_data->assets.GetTexture("Game Background"));
     
@@ -89,6 +90,10 @@ void GameState::Update(float dt) {
             }
         }
     }
+    
+    if (GameStates::eGameOver == _gameState) {
+        flash->Show(dt);
+    }
 }
 
 void GameState::Draw(float dt) {
@@ -98,6 +103,8 @@ void GameState::Draw(float dt) {
     pipe->DrawPipes();
     land->DrawLand();
     bird->Draw();
+    
+    flash->Draw();
     
     _data->window.display();
 }
