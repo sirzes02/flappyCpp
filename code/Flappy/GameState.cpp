@@ -119,7 +119,7 @@ void GameState::Update(float dt) {
         flash->Show(dt);
         
         if (clock.getElapsedTime().asSeconds() > TIME_BEFORE_GAME_OVER_APPEARS) {
-            _data->machine.AddState(StateRef(new GameOverState(_data)), true);
+            _data->machine.AddState(StateRef(new GameOverState(_data, _score)), true);
         }
     }
 }
