@@ -14,6 +14,7 @@
 		BF7132FD2C1A420100B5374C /* Pipe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF7132FB2C1A420100B5374C /* Pipe.cpp */; };
 		BF7133002C1A4B0600B5374C /* Land.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF7132FE2C1A4B0600B5374C /* Land.cpp */; };
 		BF7133032C1AB71B00B5374C /* Bird.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF7133012C1AB71B00B5374C /* Bird.cpp */; };
+		BF7133062C1C122A00B5374C /* Collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF7133042C1C122A00B5374C /* Collision.cpp */; };
 		BF96A3CB2C194EA10058919F /* libsfml-audio.2.6.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF3B4E5B2C19499F002DF515 /* libsfml-audio.2.6.1.dylib */; };
 		BF96A3CC2C194EA10058919F /* libsfml-graphics.2.6.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF3B4E5F2C19499F002DF515 /* libsfml-graphics.2.6.1.dylib */; };
 		BF96A3CD2C194EA10058919F /* libsfml-network.2.6.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF3B4E5C2C19499F002DF515 /* libsfml-network.2.6.1.dylib */; };
@@ -69,6 +70,8 @@
 		BF7132FF2C1A4B0600B5374C /* Land.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Land.hpp; sourceTree = "<group>"; };
 		BF7133012C1AB71B00B5374C /* Bird.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Bird.cpp; sourceTree = "<group>"; };
 		BF7133022C1AB71B00B5374C /* Bird.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Bird.hpp; sourceTree = "<group>"; };
+		BF7133042C1C122A00B5374C /* Collision.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Collision.cpp; sourceTree = "<group>"; };
+		BF7133052C1C122A00B5374C /* Collision.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Collision.hpp; sourceTree = "<group>"; };
 		BF96A3D02C194FA90058919F /* State.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = State.hpp; sourceTree = "<group>"; };
 		BF96A3D12C19506E0058919F /* StateMachine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StateMachine.cpp; sourceTree = "<group>"; };
 		BF96A3D22C19506E0058919F /* StateMachine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StateMachine.hpp; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				BF7132FF2C1A4B0600B5374C /* Land.hpp */,
 				BF7133012C1AB71B00B5374C /* Bird.cpp */,
 				BF7133022C1AB71B00B5374C /* Bird.hpp */,
+				BF7133042C1C122A00B5374C /* Collision.cpp */,
+				BF7133052C1C122A00B5374C /* Collision.hpp */,
 			);
 			path = Flappy;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7133062C1C122A00B5374C /* Collision.cpp in Sources */,
 				BF7132F42C19E4BF00B5374C /* MainMenuState.cpp in Sources */,
 				BF7132F72C19E95700B5374C /* GameState.cpp in Sources */,
 				BF7133002C1A4B0600B5374C /* Land.cpp in Sources */,

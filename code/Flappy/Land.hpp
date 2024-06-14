@@ -19,6 +19,8 @@ public:
     void MoveLand(float dt);
     void DrawLand();
     
+    const std::vector<sf::Sprite> &GetSprite() const;
+    
 private:
     GameDataRef _data;
     

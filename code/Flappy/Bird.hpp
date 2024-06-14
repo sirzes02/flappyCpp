@@ -24,6 +24,8 @@ public:
     void Update(float dt);
     void Tap();
     
+    const sf::Sprite &GetSprite() const;
+    
 private:
     GameDataRef _data;
     

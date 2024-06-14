@@ -39,4 +39,8 @@ void Land::DrawLand() {
         _data->window.draw(_landSprites.at(i));
     }
 }
+
+const std::vector<sf::Sprite> &Land::GetSprite() const{
+    return _landSprites;
+}
 }
