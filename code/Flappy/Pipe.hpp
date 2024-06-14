@@ -24,6 +24,8 @@ public:
     void DrawPipes();
     void RandomisePipeOffset();
     
+    const std::vector<sf::Sprite> &GetSprites() const;
+    
 private:
     GameDataRef _data;
     std::vector<sf::Sprite> pipeSprites;
