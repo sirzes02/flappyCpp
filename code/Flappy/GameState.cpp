@@ -24,6 +24,7 @@ void GameState::Init() {
     _data->assets.LoadTexture("Bird Frame 2", BIRD_FRAME_2_FILEPATH);
     _data->assets.LoadTexture("Bird Frame 3", BIRD_FRAME_3_FILEPATH);
     _data->assets.LoadTexture("Bird Frame 4", BIRD_FRAME_4_FILEPATH);
+    _data->assets.LoadTexture("Scoring Pipe", SCORING_PIPE_FILEPATH);
     
     pipe = new Pipe(_data);
     land = new Land(_data);
@@ -31,6 +32,8 @@ void GameState::Init() {
     flash = new Flash(_data);
     
     _background.setTexture(this->_data->assets.GetTexture("Game Background"));
+    
+    _score = 0;
     
     _gameState = GameStates::eReady;
 }
@@ -68,6 +71,7 @@ void GameState::Update(float dt) {
             pipe->SpawnInvisiblePipe();
             pipe->SpawnBottomPipe();
             pipe->SpawnTopPipe();
+            pipe->SpawnScoringPipe();
             
             clock.restart();
         }
@@ -87,6 +91,16 @@ void GameState::Update(float dt) {
         for (int i = 0; i < pipeSprites.size(); i++) {
             if (collision.checkSpriteCollision(bird->GetSprite(), 0.625f, pipeSprites.at(i), 1.0f)) {
                 _gameState = GameStates::eGameOver;
+            }
+        }
+        
+        std::vector<sf::Sprite> &scoringSprites = pipe->GetScoringSprites();
+        
+        for (int i = 0; i < scoringSprites.size(); i++) {
+            if (collision.checkSpriteCollision(bird->GetSprite(), 0.625f, scoringSprites.at(i), 1.0f)) {
+                _score++;
+                                
+                scoringSprites.erase(scoringSprites.begin() + i);
             }
         }
     }

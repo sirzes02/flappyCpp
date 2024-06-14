@@ -38,6 +38,14 @@ void Pipe::SpawnInvisiblePipe() {
     pipeSprites.push_back(sprite);
 }
 
+void Pipe::SpawnScoringPipe() {
+    sf::Sprite sprite(_data->assets.GetTexture("Scoring Pipe"));
+    
+    sprite.setPosition(_data->window.getSize().x, 0);
+    
+    scoringSprites.push_back(sprite);
+}
+
 void Pipe::MovePipes(float dt) {
     for (unsigned short int i = 0; i < pipeSprites.size(); i++) {
         if (pipeSprites.at(i).getPosition().x < (0 - pipeSprites.at(i).getGlobalBounds().width)) {
@@ -46,6 +54,16 @@ void Pipe::MovePipes(float dt) {
             float movement = PIPE_MOVEMENT_SPEED * dt;
             
             pipeSprites.at(i).move(-movement, 0);
+        }
+    }
+    
+    for (unsigned short int i = 0; i < scoringSprites.size(); i++) {
+        if (scoringSprites.at(i).getPosition().x < (0 - scoringSprites.at(i).getGlobalBounds().width)) {
+            scoringSprites.erase(scoringSprites.begin() + i);
+        } else {
+            float movement = PIPE_MOVEMENT_SPEED * dt;
+            
+            scoringSprites.at(i).move(-movement, 0);
         }
     }
 }
@@ -62,5 +80,9 @@ void Pipe::RandomisePipeOffset() {
 
 const std::vector<sf::Sprite> &Pipe::GetSprites() const {
     return pipeSprites;
+}
+
+std::vector<sf::Sprite> &Pipe::GetScoringSprites() {
+    return scoringSprites;
 }
 }
